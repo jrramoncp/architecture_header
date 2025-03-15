@@ -4,6 +4,7 @@
 main{
     display: flex;
     padding-top: 40px;
+    position: relative;
     // HERO
     .hero{
         max-width: 50%;
@@ -71,5 +72,60 @@ main{
                 }
             }
         }
+    }
+
+    aside.service{
+        background-color: #FAF8F5;
+        position: absolute;
+        right: 20px;
+        width: 350px;
+        height: 260px;
+        padding: 35px 20px;
+        bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        p{
+            font-size: 14px;
+            color: v.$font-primary-color;
+        }
+       .aside__links{
+            max-width: 90%;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            position: relative;
+            &:nth-of-type(n+2){
+                &::before{
+                    content: "";
+                    width: 90%;
+                    height: 1px;
+                    display: inline-block;
+                    background-color: v.$font-secondary-color;
+                    position: absolute;
+                    top: 0px;
+                    opacity: 0.3;
+                }
+            }
+            a{
+                text-decoration: none;
+                color: v.$font-primary-color;
+                background-image: url(/img/right-arrow.svg);
+                background-repeat: no-repeat;
+                background-position: center right;
+                min-width: 90%;
+                font-weight: 400;
+            }
+            .number{
+                color: v.$font-secondary-color;
+                font-size: 13px;
+                padding-right: 0;
+                background: none;
+                min-width: 5%;
+            }
+       }
     }
 }
