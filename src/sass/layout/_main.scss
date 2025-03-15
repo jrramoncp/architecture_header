@@ -26,6 +26,7 @@ main{
                 margin-bottom: 32px;
             }
 
+            // BUTTONS STYLES
             .hero__buttons{
                 @include m.reset-list;
                 a{
@@ -44,11 +45,16 @@ main{
                     background-image: url(/img/diagonal-arrow.svg);
                     background-repeat: no-repeat;
                     background-position: right 1em center;
+                    transition: ease 0.5s;
+                    &:hover{
+                        background-color: v.$background-secondary-color;
+                        color: v.$font-secondary-color;
+                    }
                 }
                 
             }
         }
-        //HERO NUMBERS
+        //HERO NUMBERS STYLES
         .hero__numbers{
             display: flex;
             align-items: stretch;
@@ -74,6 +80,7 @@ main{
         }
     }
 
+    // ASIDE SERVICES STYLES
     aside.service{
         background-color: #FAF8F5;
         position: absolute;
