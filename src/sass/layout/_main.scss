@@ -1,0 +1,50 @@
+@use '../abstract/_variables' as v;
+@use '../abstract/_mixins' as m;
+
+main{
+    display: flex;
+    padding-top: 40px;
+    .hero{
+        max-width: 50%;
+
+        .hero__main{
+            margin-bottom: 200px ;
+            h1{
+                font-family: v.$title-font;
+                font-size: 60px;
+                line-height: 96px;
+                color: v.$font-primary-color;
+                font-weight: normal;
+                margin-bottom: 32px;
+            }
+
+            p{
+                color: v.$font-secondary-color;
+                font-size: 18px;
+                margin-bottom: 32px;
+            }
+
+            .hero__buttons{
+                @include m.reset-list;
+                a{
+                    color: v.$font-primary-color;
+                    padding-right: 50px;
+                    background-image: url(/img/chevron-down.svg);
+                    background-repeat: no-repeat;
+                    background-position: right 1em center;
+                }
+                .btn{
+                    display: inline-block;
+                    color: white;
+                    background-color: v.$font-primary-color;
+                    padding: 10px 25px;
+                    padding-right: 50px;
+                    background-image: url(/img/diagonal-arrow.svg);
+                    background-repeat: no-repeat;
+                    background-position: right 1em center;
+                }
+                
+            }
+        }
+    }
+}
