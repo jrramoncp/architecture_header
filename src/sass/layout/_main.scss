@@ -4,11 +4,12 @@
 main{
     display: flex;
     padding-top: 40px;
+    // HERO
     .hero{
         max-width: 50%;
-
+        //HERO MAIN
         .hero__main{
-            margin-bottom: 200px ;
+            padding-bottom: 250px ;
             h1{
                 font-family: v.$title-font;
                 font-size: 60px;
@@ -44,6 +45,30 @@ main{
                     background-position: right 1em center;
                 }
                 
+            }
+        }
+        //HERO NUMBERS
+        .hero__numbers{
+            display: flex;
+            align-items: stretch;
+            gap: 20px;
+            max-width: 70%;
+            article{
+                padding-top: 20px;
+                min-height: 100%;
+                min-width: 25%;
+                h2{
+                    font-size:50px;
+                    line-height: 70px;
+                    font-weight: 500;
+                    padding-bottom: 8px;
+                }
+                p{
+                    color: v.$font-secondary-color;
+                    text-align: left;   
+                    max-width: 30%;
+                    font-size: 16px;
+                }
             }
         }
     }

@@ -22,4 +22,20 @@ body{
     padding-right: 16px;
     margin-right: auto;
     margin-left: auto;
+    background-image: url(/img/hero-img-2.png),url(/img/hero-img-1.png);
+    background-repeat: no-repeat;
+    background-position: center center, center right;
+    background-size: 450px;
+    position: relative;
+    z-index: 1;
+    &::after{
+        content:"";
+        width: 360px;
+        height: 200px;
+        position: absolute;
+        background-color: v.$background-tertiary-color;
+        right: 700px;
+        bottom: -150px;
+        z-index: -1;
+    }
 }
