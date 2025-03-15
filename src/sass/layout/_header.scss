@@ -1,0 +1,25 @@
+@use '../abstract/_variables' as v;
+@use '../abstract/_mixins' as m;
+
+header.header{
+    display: flex;
+    gap: 150px ;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    align-items: center;
+
+    nav{
+        .nav__ul{
+            @include m.reset-list();
+            a{
+                color: v.$font-secondary-color;
+                transition: ease 0.5s;
+                &:hover{
+                    color: v.$font-primary-color;
+                    font-weight: bold;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
